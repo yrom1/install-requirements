@@ -14,5 +14,6 @@ pip install .
 
 py -m pip uninstall numpy
 before
-py test.py
+touch TEST_OUTPUT.txt
+py test.py > TEST_OUTPUT.txt 2>&1
 after

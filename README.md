@@ -1,4 +1,4 @@
-# install_requirements
+# install-requirements
 
 A module for automatically installing the `requirements.txt` file at runtime. So when prototyping, you don't have to type `python3 -m pip install -r requirements.txt` all the time.
 
