@@ -3,11 +3,13 @@
 A module for automatically installing the `requirements.txt` file at runtime. So when prototyping, you don't have to type `python3 -m pip install -r requirements.txt` all the time.
 
 ```py
-import rinstall
-# - KEEP FIRST! -
+import rinstall  # isort: skip
+
+# ^^^ KEEP FIRST! ^^^
 
 import numpy as np
-print(np.array([0,1,2]))
+
+print(np.array([0, 1, 2]))
 ```
 
 Outputs:
