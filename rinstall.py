@@ -2,6 +2,7 @@ import subprocess
 import sys
 from pathlib import Path
 
+
 def find_requirements() -> str:
     current_directory = "."
     count = 1
@@ -19,13 +20,20 @@ def find_requirements() -> str:
         # TODO real exception handling if hit end of file system
         #      just prevent the inf loop for now
         if count == 20:
-            raise RuntimeError('Cannot find requirements.txt file in parent directories of import statement!')
+            raise RuntimeError(
+                "Cannot find requirements.txt file in parent directories of import statement!"
+            )
     return requirements[0]
 
+
 def run_install_subprocess() -> None:
-    subprocess.run([sys.executable, "-m", "pip", "install", "-r", f"{find_requirements()}"])
+    subprocess.run(
+        [sys.executable, "-m", "pip", "install", "-r", f"{find_requirements()}"]
+    )
+
 
 def main() -> None:
     run_install_subprocess()
+
 
 main()

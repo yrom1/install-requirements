@@ -1,13 +1,14 @@
+with open("install.sh", "r") as f:
+    INSTALL = f.read()
+with open("test.py", "r") as f:
+    TEST_FILE = f.read()
+README = f"""\
 # install_requirements
 
 A module for automatically installing the `requirements.txt` file at runtime. So when prototyping, you don't have to type `python3 -m pip install -r requirements.txt` all the time.
 
 ```py
-import rinstall
-# - KEEP FIRST! -
-
-import numpy as np
-print(np.array([0,1,2]))
+{TEST_FILE}\
 ```
 
 Outputs:
@@ -23,7 +24,9 @@ Successfully installed numpy-1.22.3
 ## Installation
 
 ```
-git clone https://github.com/yrom1/install_requirements.git
-cd install_requirements
-pip install .
+{INSTALL}\
 ```
+"""
+
+with open("README.md", "w") as f:
+    f.write(README)
