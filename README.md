@@ -25,7 +25,7 @@ Successfully installed numpy-1.22.3
 ## Installation
 
 ```
-git clone https://github.com/yrom1/install_requirements.git
-cd install_requirements
+git clone https://github.com/yrom1/install-requirements.git
+cd install-requirements
 pip install .
 ```
